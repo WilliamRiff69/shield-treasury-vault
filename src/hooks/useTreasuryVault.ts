@@ -105,7 +105,7 @@ const TREASURY_VAULT_ABI = [
 ] as const;
 
 // Contract address - This would be the deployed contract address
-const TREASURY_VAULT_ADDRESS = process.env.VITE_CONTRACT_ADDRESS || '0x0000000000000000000000000000000000000000';
+const TREASURY_VAULT_ADDRESS = import.meta.env.VITE_CONTRACT_ADDRESS || '0x0000000000000000000000000000000000000000';
 
 export const useTreasuryVault = () => {
   const { address, isConnected } = useAccount();
